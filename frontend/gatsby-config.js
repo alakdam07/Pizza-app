@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+dotenv.config({ path: '.env' });
+
+
 module.exports = {
   siteMetadata: {
     title: `Pizza`,
@@ -7,10 +11,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
-      resolve: ,
+      resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'knu8v4yr
-        '
+        projectId: 'knu8v4yr',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
       }
     }
   ]
