@@ -58,3 +58,26 @@ export const ItemStyles = styled.div`
     animation: shine 1s infinite linear;
   }
 `;
+
+
+export const PizzaGridStyles = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4rem;
+  grid-auto-rows: auto auto 500px;
+`;
+
+export const PizzaStyles = styled.div`
+  display: grid;
+  /* Take your row sizing not from the pizzaStyles div, but from the  PizzaGridStyles grid */
+  @supports not (grid-template-rows: subgrid) {
+    --rows: auto auto 1fr;
+  }
+  grid-template-rows: var(--rows, subgrid);
+  grid-row: span 3;
+  grid-gap: 1rem;
+  h2,
+  p {
+    margin: 0;
+  }
+`;
