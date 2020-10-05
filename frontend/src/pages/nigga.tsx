@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function Beer({ data }: Props): ReactElement {
-  console.log(data);
+  console.log("Nigga", data);
 
   return (
     <>
@@ -15,6 +15,8 @@ export default function Beer({ data }: Props): ReactElement {
     </>
   )
 };
+
+
 
 export const query = graphql`
   query {
