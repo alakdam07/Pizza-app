@@ -12,7 +12,6 @@ export default function Home({ }: Props): ReactElement {
   return (
     <NavStyles>
       <ul>
-        <li><Link to="/nigga"> Nigga</Link></li>
         <li><Link to="/beers"> Beers</Link></li>
         <li><Link to="/pizzas/">Pizza menu</Link></li>
         <li className="logo-item">

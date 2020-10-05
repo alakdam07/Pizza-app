@@ -107,10 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `beer/${beer.name}`,
       component: createSingleBeerPage,
       context: {
-        // This context varaible we are passing to /pages/pizzas.tsx then we use filter methond
-        beer: beer.name, // we can filter them by name or
-        //toppingRegex: `/${topping.name}/i`, // we can filter them by regex
-        //Both exmaples are shown in there
+        beer: beer.name
       }
     })
   });

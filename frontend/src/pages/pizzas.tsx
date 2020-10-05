@@ -11,7 +11,7 @@ interface Props {
 
 export default function Pizzas(props, { pageContext }): ReactElement {
 
-  console.log("hhhhh", pageContext);
+
   const totalPizza = props.data.pizzas.nodes;
 
   return (

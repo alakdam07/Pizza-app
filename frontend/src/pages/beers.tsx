@@ -1,17 +1,17 @@
-
 import React, { ReactElement } from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
-
+import BeerList from '../components/BeerList/BeerList'
 interface Props {
 
 }
 
 export default function Beer({ data }: Props): ReactElement {
   console.log(data);
-
+  const beers = data?.allBeer?.nodes;
   return (
     <>
-      <h1>Beers</h1>
+      <BeerList beers={beers} />
     </>
   )
 };
@@ -19,16 +19,17 @@ export default function Beer({ data }: Props): ReactElement {
 export const query = graphql`
   query {
    allBeer {
-    nodes {
-      name
-      price
-      image
-      rating {
-        average
-        reviews
+      nodes {
+        id
+        name
+        price
+        image
+        rating {
+          average
+          reviews
+        }
       }
     }
   }
-}
+`;
 
-`
