@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 import PizzaList from '../components/pizzaLists/PizzaList';
+import ToppingList from '../components/ToppingsList/Toppings';
 interface Props {
 
 }
@@ -12,6 +13,7 @@ export default function Pizzas(props): ReactElement {
 
   return (
     <>
+      <ToppingList />
       <PizzaList pizzas={totalPizza} />
     </>
   )

@@ -6,9 +6,6 @@ interface IProps {
   fluid: fixedObject | fixedObject[];
 }
 function SinglePizza({ pizza, fluid }: IProps) {
-
-  console.log("Pizaa", pizza);
-
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>

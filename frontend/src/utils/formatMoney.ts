@@ -1,6 +1,6 @@
-const formatter = Intl.NumberFormat('en-CA', {
+const formatter = Intl.NumberFormat('FIN', {
   style: 'currency',
-  currency: 'CAD',
+  currency: 'EURO',
 });
 
 export default function formatMoney(cents) {
