@@ -28,8 +28,8 @@ const ToppingsStyles = styled.div`
 `;
 
 function countPizzasInToppings(pizzas) {
-  console.clear()
-  console.log(pizzas);
+
+  //console.log(pizzas);
 
   // Return the pizzas with counts
   const counts = pizzas

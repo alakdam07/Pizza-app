@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "pizza"
+    "name": "pizza-store"
   },
   "api": {
-    "projectId": "knu8v4yr",
+    "projectId": "rvangftr",
     "dataset": "production"
   },
   "plugins": [

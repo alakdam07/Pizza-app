@@ -6,9 +6,12 @@ interface Props {
 
 }
 
-export default function Pizzas(props): ReactElement {
+// this pageContext is coming from gatsby-node.js when we created the topping page's
+// context.
 
-  console.log(props);
+export default function Pizzas(props, { pageContext }): ReactElement {
+
+  console.log("hhhhh", pageContext);
   const totalPizza = props.data.pizzas.nodes;
 
   return (
@@ -47,3 +50,33 @@ export const query = graphql`
     }
   }
 `;
+
+// export const query = graphql`
+//   query PizzaQuery($topping: [String]) {
+//     pizzas: allSanityPizza(
+//       filter: { toppings: { elemMatch: { name: { in: $topping } } } }
+//     ) {
+//       nodes {
+//         name
+//         id
+//         slug {
+//           current
+//         }
+//         toppings {
+//           id
+//           name
+//         }
+//         image {
+//           asset {
+//             fixed(width: 600, height: 200) {
+//               ...GatsbySanityImageFixed
+//             }
+//             fluid(maxWidth: 400) {
+//               ...GatsbySanityImageFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

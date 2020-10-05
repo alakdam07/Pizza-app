@@ -10,3 +10,7 @@
 <h5 align="center">
 Made in Gatsby
 </h5>
+
+
+Task:
+watch video number: 22, 25,
